@@ -1,0 +1,14 @@
+com/irental_mobile/BuildConfig.java
+ com.irental_mobile.BuildConfig
+com/irental_mobile/ReactNativeFlipper.java
+ com.irental_mobile.ReactNativeFlipper
+ com.irental_mobile.ReactNativeFlipper$1
+ com.irental_mobile.ReactNativeFlipper$2
+ com.irental_mobile.ReactNativeFlipper$2$1
+com/irental_mobile/MainApplication.java
+ com.irental_mobile.MainApplication
+ com.irental_mobile.MainApplication$1
+com/irental_mobile/MainActivity.java
+ com.irental_mobile.MainActivity
+com/facebook/react/PackageList.java
+ com.facebook.react.PackageList

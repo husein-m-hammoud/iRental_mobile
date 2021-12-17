@@ -1,22 +1,39 @@
-import * as React from 'react';
-import { View } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import Home  from './screens/home'
+import 'react-native-gesture-handler';
+import React from 'react'
+import { Provider } from 'react-native-paper'
+import { NavigationContainer } from '@react-navigation/native'
+import { createStackNavigator } from '@react-navigation/stack'
+import { theme } from '../app/core/theme'
+import {
+  StartScreen,
+  LoginScreen,
+  RegisterScreen,
+  ResetPasswordScreen,
+  Dashboard,
+} from '../app/screens'
 
-const Stack = createNativeStackNavigator();
+const Stack = createStackNavigator()
+
 export default function App() {
   return (
-    <View style={{ flex: 1 }}>
+    <Provider theme={theme}>
       <NavigationContainer>
-      <Stack.Navigator>
+        <Stack.Navigator
+          initialRouteName="StartScreen"
+          screenOptions={{
+            headerShown: false,
+          }}
+        >
+          <Stack.Screen name="StartScreen" component={StartScreen} />
+          <Stack.Screen name="LoginScreen" component={LoginScreen} />
+          <Stack.Screen name="RegisterScreen" component={RegisterScreen} />
+          <Stack.Screen name="Dashboard" component={Dashboard} />
           <Stack.Screen
-            name="Home"
-            component={Home}
-            options={{ title: 'Welcome' }}
+            name="ResetPasswordScreen"
+            component={ResetPasswordScreen}
           />
         </Stack.Navigator>
       </NavigationContainer>
-    </View>
-  );
+    </Provider>
+  )
 }
